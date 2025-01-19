@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Progress } from '@/components/ui/progress';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card';
+import { Button } from './components/ui/button';
+import { Input } from './components/ui/input';
+import { Progress } from './components/ui/progress';
+import { RadioGroup, RadioGroupItem } from './components/ui/radio-group';
+import { Label } from './components/ui/label';
+import { Alert, AlertDescription } from './components/ui/alert';
+import { Badge } from './components/ui/badge';
 import { Brain, ChevronRight, BookOpen, Target, Briefcase, Code, Users, PenTool, BarChart } from 'lucide-react';
 
 const CareerGuidancePlatform = () => {
@@ -79,7 +79,7 @@ const CareerGuidancePlatform = () => {
   const calculateSkillScores = () => {
     const scores = { ...skillScores };
     const categoryQuestions = {};
-    
+
     assessmentQuestions.forEach(q => {
       categoryQuestions[q.category] = (categoryQuestions[q.category] || 0) + 1;
     });
@@ -172,7 +172,7 @@ const CareerGuidancePlatform = () => {
             ))}
           </RadioGroup>
         </div>
-        
+
         <div className="flex justify-between pt-4">
           <Button
             variant="outline"
